@@ -16,9 +16,7 @@ Demo Video
 
 ---
 
-<video width="640" height="360" controls muted>
-  <source src="./demo/android.mp4" type="video/mp4">
-</video>
+https://github.com/rajatabcx/surplus_assignment/assets/108508250/b87a5ca8-8e3f-40db-8559-834553c29751
 
 ---
 
@@ -26,8 +24,6 @@ Demo Video
 
 ---
 
-<video width="640" height="360" controls muted>
-  <source src="./demo/android.mp4" type="video/mp4">
-</video>
+https://github.com/rajatabcx/surplus_assignment/assets/108508250/68eec24d-2862-45a7-aa69-5c0f73d6096f
 
 ---
