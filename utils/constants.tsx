@@ -1,6 +1,6 @@
-import { DailyAverageSpent } from '../components/DailyAverageSpent';
-import { MonthlySpending } from '../components/MonthlySpending';
-import { TopCategories } from '../components/TopCategories';
+import { DailyAverageSpent } from '../components/spending/DailyAverageSpent';
+import { MonthlySpending } from '../components/spending/MonthlySpending';
+import { TopCategories } from '../components/spending/TopCategories';
 import { AverageSpent } from '../types/averageSpent.type';
 import { GraphCarousel } from '../types/graphCarousel.type';
 import { MonthlySpent } from '../types/monthlySpent.type';

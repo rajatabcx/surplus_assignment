@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Dimensions, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { graphCarouselData } from './utils/constants';
-import { Carousel } from './components/Carousel';
+import { Carousel } from './components/common/Carousel';
 
 export default function App() {
   return (
@@ -12,6 +12,7 @@ export default function App() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.scrollInnerContainer}
       >
+        {/* Using custom carousel component to show all 3 types of spending graphs */}
         <Carousel
           data={graphCarouselData}
           width={Dimensions.get('window').width}

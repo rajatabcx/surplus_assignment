@@ -1,7 +1,8 @@
 import { Text, View, StyleSheet, Pressable } from 'react-native';
-import { percentageCalculation } from '../utils/helpers';
-import { TopCategory } from '../types/topCategories.type';
+import { percentageCalculation } from '../../utils/helpers';
+import { TopCategory } from '../../types/topCategories.type';
 
+// to show what percentage of allocated amount is used in percentage format
 export const UsedAmountGraph = (props: TopCategory) => {
   const percentage = percentageCalculation(
     props.usedUpAmount,

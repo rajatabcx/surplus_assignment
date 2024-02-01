@@ -3,6 +3,7 @@ interface PropTypes {
   spent: number;
 }
 
+// small pill component to show the value on top of bar chart
 export const MoneyPill = (props: PropTypes) => {
   return (
     <View style={styles.pill}>

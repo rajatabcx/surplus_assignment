@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import CarouselComponent from 'react-native-reanimated-carousel';
 import { CarouselRenderItemInfo } from 'react-native-reanimated-carousel/lib/typescript/types';
 import Dots from 'react-native-dots-pagination';
-import { checkIOS } from '../utils/helpers';
+import { checkIOS } from '../../utils/helpers';
 
 interface PropsType<Type> {
   data: Type[];
@@ -18,6 +18,7 @@ export function Carousel<Type>(props: PropsType<Type>) {
   const [index, setIndex] = useState(0);
   return (
     <>
+      {/* if heading available showing it, with the slide number */}
       {props.heading ? (
         <View style={styles.header}>
           <Text style={styles.heading}>{props.heading}</Text>
@@ -26,6 +27,7 @@ export function Carousel<Type>(props: PropsType<Type>) {
           </Text>
         </View>
       ) : null}
+      {/* making custom carousel component using reanimated carousel library */}
       <CarouselComponent
         loop={!!props.loop}
         width={props.width}
@@ -45,6 +47,7 @@ export function Carousel<Type>(props: PropsType<Type>) {
         }}
         scrollAnimationDuration={500}
       />
+      {/* the dots on bottom of carousel to keep the track of slides */}
       <View>
         <Dots
           length={props.data.length}

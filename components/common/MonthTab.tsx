@@ -5,6 +5,7 @@ interface PropTypes {
   month: string;
 }
 
+// month tab to show the month name with icon, this component is used by Month Selector for further customizations
 export const MonthTab = (props: PropTypes) => {
   return (
     <View style={styles.tab}>

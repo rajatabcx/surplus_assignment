@@ -8,6 +8,7 @@ interface PropTypes {
   handleNextClicked: () => void;
 }
 
+// months selector component to change between months and see different trends
 export const MonthSelector = (props: PropTypes) => {
   return (
     <View style={styles.monthSelectorContainer}>

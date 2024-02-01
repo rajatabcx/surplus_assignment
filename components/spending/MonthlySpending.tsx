@@ -1,10 +1,10 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { BarChart, LineChart } from 'react-native-gifted-charts';
-import { MonthlySpent } from '../types/monthlySpent.type';
+import { MonthlySpent } from '../../types/monthlySpent.type';
 import { useMemo, useState } from 'react';
-import { MonthSelector } from './MonthSelector';
-import { BarChartType } from '../types/barChart.type';
-import { MoneyPill } from './MoneyPill';
+import { MonthSelector } from '../common/MonthSelector';
+import { BarChartType } from '../../types/barChart.type';
+import { MoneyPill } from '../common/MoneyPill';
 
 const WEEKLY_SPENDING_LIMIT = 30;
 
@@ -12,9 +12,11 @@ interface PropTypes {
   data: MonthlySpent;
 }
 
+// component to show monthly spending
 export const MonthlySpending = (props: PropTypes) => {
   const [selected, setSelected] = useState(0);
   const [graphType, setGraphType] = useState(0);
+  // extracting data
   const months = Object.keys(props.data);
   const totalSpent = props.data[months[selected]].spending.reduce(
     (acc, item) => {
@@ -23,6 +25,7 @@ export const MonthlySpending = (props: PropTypes) => {
     0
   );
 
+  // modifying data to use it with the BarChart/AreaChart component from the package
   const data: BarChartType = useMemo(() => {
     const modifiedData: BarChartType = props.data[
       months[selected]
@@ -43,6 +46,7 @@ export const MonthlySpending = (props: PropTypes) => {
     );
     return modifiedData;
   }, [selected]);
+
   return (
     <View style={styles.container}>
       <View style={styles.headingContainer}>

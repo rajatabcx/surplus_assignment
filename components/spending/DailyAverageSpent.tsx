@@ -1,19 +1,21 @@
-import { AverageSpent } from '../types/averageSpent.type';
-import { StackedBarChart as StackedBarChartType } from '../types/barChart.type';
+import { AverageSpent } from '../../types/averageSpent.type';
+import { StackedBarChart as StackedBarChartType } from '../../types/barChart.type';
 import { StyleSheet, Text, View } from 'react-native';
 import { BarChart } from 'react-native-gifted-charts';
-import { MonthSelector } from './MonthSelector';
+import { MonthSelector } from '../common/MonthSelector';
 import { useMemo, useState } from 'react';
-import { MoneyPill } from './MoneyPill';
+import { MoneyPill } from '../common/MoneyPill';
 
 interface PropTypes {
   data: AverageSpent;
 }
 
+// This component shows the average Spending
 export function DailyAverageSpent(props: PropTypes) {
   const [selected, setSelected] = useState(0);
   const months = Object.keys(props.data);
 
+  // modifying the data to use it with BarChart component from package
   const data: StackedBarChartType = useMemo(() => {
     const monthData = props.data[months[selected]];
     const averageSpent = monthData.averageSpent;

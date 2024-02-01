@@ -1,11 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native';
-import { TopCategories as TopCategoriesType } from '../types/topCategories.type';
-import { UsedAmountGraph } from './UsedAmountGraph';
+import { TopCategories as TopCategoriesType } from '../../types/topCategories.type';
+import { UsedAmountGraph } from '../common/UsedAmountGraph';
+import { checkIOS } from '../../utils/helpers';
 
 interface PropTypes {
   data: TopCategoriesType;
 }
 
+// TOp Categories component
 export const TopCategories = (props: PropTypes) => {
   return (
     <View style={styles.container}>
@@ -44,9 +46,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '100%',
     paddingHorizontal: 16,
-    marginBottom: 22,
+    marginBottom: checkIOS() ? 22 : 18,
   },
   graphContainer: {
-    gap: 24,
+    gap: checkIOS() ? 24 : 22,
   },
 });
