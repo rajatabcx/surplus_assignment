@@ -16,7 +16,9 @@ Demo Video
 
 ---
 
-<video src="/demo/android.mp4"></video>
+<video width="640" height="360" controls muted>
+  <source src="./demo/android.mp4" type="video/mp4">
+</video>
 
 ---
 
@@ -24,6 +26,8 @@ Demo Video
 
 ---
 
-<video src="/demo/ios.mp4"></video>
+<video width="640" height="360" controls muted>
+  <source src="./demo/android.mp4" type="video/mp4">
+</video>
 
 ---
